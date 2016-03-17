@@ -1,0 +1,32 @@
+{
+  "name": "loopback-component-image-uploads",
+  "version": "0.0.1",
+  "description": "Image uploads with resize and folder creation for loopback",
+  "main": "index.js",
+  "keywords": [
+    "loopback",
+    "MCMS",
+    "Admin",
+    "CMS",
+    "Image",
+    "Resize",
+    "ImageMagick",
+    "component"
+  ],
+  "author": "Michael Bouclas <mbouclas@gmail.com> (http://net-tomorrow.com/)",
+  "license": "MIT",
+  "dependencies": {
+    "bluebird": "^3.3.4",
+    "fs-extra": "^0.26.7",
+    "fs-extra-promise": "^0.3.1",
+    "imagemagick": "^0.1.3",
+    "lodash": "^4.6.1"
+  },
+  "scripts": {},
+  "devDependencies": {},
+  "homepage": "https://github.com/mbouclas/loopback-component-image-uploads",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mbouclas/loopback-component-image-uploads.git"
+  }
+}
