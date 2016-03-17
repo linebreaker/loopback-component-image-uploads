@@ -72,6 +72,7 @@ module.exports = (function (App, Package, privateMethods) {
                 if (itemObj){
                     copies[i].imageUrl = privateMethods.replaceParams(Config.url, itemObj) + copies[i].dir + '/' + path.basename(file);
                 }
+                
                 toResize.push(new Resizer().resize(file, destFolder ,copies[i]));
             }
 

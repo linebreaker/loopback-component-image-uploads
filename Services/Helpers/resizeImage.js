@@ -15,7 +15,9 @@ module.exports = (function(App,Package,privateMethods){
             } catch (e){
                 fs.ensureDirSync(destFolder);
             }
-            var destImage = path.join(destFolder, path.basename(sourceImage));
+
+            var imageName = (copy.prefix) ? copy.prefix + path.basename(sourceImage) : path.basename(sourceImage),
+                destImage = path.join(destFolder, imageName);
 
             im.resize({
                 srcPath: sourceImage,
