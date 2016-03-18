@@ -70,9 +70,10 @@ module.exports = (function (App, Package, privateMethods) {
                 var destFolder = baseDir + copies[i].dir;
                 copies[i].name = i;
                 if (itemObj){
-                    copies[i].imageUrl = privateMethods.replaceParams(Config.url, itemObj) + copies[i].dir + '/' + path.basename(file);
+                    var imageName = (copies[i].prefix) ? copies[i].prefix + path.basename(file) : path.basename(file);
+                    copies[i].imageUrl = privateMethods.replaceParams(Config.url, itemObj) + copies[i].dir + '/' + imageName;
                 }
-                
+
                 toResize.push(new Resizer().resize(file, destFolder ,copies[i]));
             }
 
