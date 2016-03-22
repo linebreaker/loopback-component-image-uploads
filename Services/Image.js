@@ -10,6 +10,7 @@ module.exports = (function(App,Package){
     name : 'Image',
     nameSpace : 'Image',
       handleUpload : require('./Helpers/handleUpload')(App,Package,privateMethods),
+      handleUploadAsync : require('./Helpers/handleUploadAsync')(App,Package,privateMethods),
       resizeImage : require('./Helpers/resizeImage')(App,Package,privateMethods),
   };
 });

@@ -4,11 +4,8 @@ module.exports = (function(App,Package,privateMethods){
         fs = Promise.promisifyAll(require('fs-extra')),
         path = require("path");
 
-    function Resizer() {
-        this.resize = performResize;
-    }
 
-    function performResize(sourceImage,destFolder, copy){
+    return function(sourceImage,destFolder, copy){
         return new Promise(function (resolve, reject) {
             try {
                 var stats = fs.lstatSync(destFolder);
@@ -32,10 +29,11 @@ module.exports = (function(App,Package,privateMethods){
                 }
 
                 copy.imagePath = path.resolve(destImage);
+
                 resolve(copy);
             });
         });
 
     }
-    return Resizer;
+
 });
