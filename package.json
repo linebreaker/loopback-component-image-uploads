@@ -1,6 +1,6 @@
 {
   "name": "loopback-component-image-uploads",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Image uploads with resize and folder creation for loopback",
   "main": "index.js",
   "keywords": [
